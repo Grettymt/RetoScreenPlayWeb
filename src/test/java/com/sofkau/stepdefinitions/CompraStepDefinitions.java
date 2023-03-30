@@ -8,6 +8,8 @@ import io.cucumber.java.es.Entonces;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
+import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
+import static com.sofkau.tasks.NavegarAInicioSesion.navegarAInicioSesion;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CompraStepDefinitions extends Configuracion {
@@ -20,6 +22,11 @@ public class CompraStepDefinitions extends Configuracion {
 
             theActorInTheSpotlight().wasAbleTo(
                     new AbrirPaginaInicial()
+            );
+
+            theActorInTheSpotlight().attemptsTo(
+                    navegarAInicioSesion(),
+                    iniciarSesion()
             );
         }catch (Exception exception) {
             quitarDriver();
