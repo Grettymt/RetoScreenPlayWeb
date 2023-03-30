@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Comprar en linea" skipped="0" tests="1" time="6.64" timestamp="2023-03-30 10:11:26"><testcase name="Compra exitosa de productos"><failure message="Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver" type="org.opentest4j.AssertionFailedError">Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver</failure><system-err>Could not instantiate class org.openqa.selenium.firefox.FirefoxDriver&#13;
+com.sofkau.stepdefinitions.CompraStepDefinitions.queElClienteEstaLogueadoEnLaPaginaPrincipal(CompraStepDefinitions.java:26)&#13;
+✽.que el cliente esta logueado en la pagina principal(file:///D:/RetoScreenPlayWeb/src/test/resources/features/compra.feature:12)&#13;
+</system-err></testcase></testsuite>
