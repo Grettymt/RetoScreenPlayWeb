@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-03-2023 12:45</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-03-2023 16:44</span>
     <br style="clear:left"/>
 </div>
 
@@ -197,9 +197,9 @@ Para poder ahorrar tiempo y acceder a mas productos disponibles sin necesidad de
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Compra exitosa de productos
+                                <span class="error-color">Compra exitosa de productos
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -216,31 +216,89 @@ Para poder ahorrar tiempo y acceder a mas productos disponibles sin necesidad de
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: no such window: target window already closed</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sofkau.tasks.FlujoCompra.performAs(FlujoCompra.java:16)<br />com.sofkau.stepdefinitions.CompraStepDefinitions.agregaVariosProductosAlCarrito(CompraStepDefinitions.java:48)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="0b08692dd462ad9497e1507125e20b25df9bf4a9464a8e94d65dc7d4418328c9.png" title=" Dado que el cliente esta logueado en la pagina principal" width="1920"/>
                 <img src="0b08692dd462ad9497e1507125e20b25df9bf4a9464a8e94d65dc7d4418328c9.png" title=" Gretty abrir pagina inicial" width="1920"/>
                 <img src="0b08692dd462ad9497e1507125e20b25df9bf4a9464a8e94d65dc7d4418328c9.png" title=" Gretty opens the Pagina inicial" width="1920"/>
-                <img src="69d646daf838bdc5cdcef7d22cc21b932d76f6999a41f54ae5f56e5c55340591.png" title=" Gretty opens the Pagina inicial (completed)" width="1920"/>
-                <img src="69d646daf838bdc5cdcef7d22cc21b932d76f6999a41f54ae5f56e5c55340591.png" title=" Gretty abrir pagina inicial (completed)" width="1920"/>
-                <img src="e80c9f7ba72d443783dbbfcff66134aa649a32d06fa9f200cf763de68cbca6e3.png" title=" Gretty navegar a inicio sesion" width="1920"/>
-                <img src="e80c9f7ba72d443783dbbfcff66134aa649a32d06fa9f200cf763de68cbca6e3.png" title=" Gretty clicks on campo correo" width="1920"/>
-                <img src="799941c2cae7db4c2ce08b64452ab346899369b4cc4365bc74f8217522e56dd5.png" title=" Gretty clicks on campo correo (completed)" width="1920"/>
-                <img src="799941c2cae7db4c2ce08b64452ab346899369b4cc4365bc74f8217522e56dd5.png" title=" Gretty navegar a inicio sesion (completed)" width="1920"/>
-                <img src="799941c2cae7db4c2ce08b64452ab346899369b4cc4365bc74f8217522e56dd5.png" title=" Gretty iniciar sesion" width="1920"/>
-                <img src="76fcb1ed15c88205e16806ba1599f844cbf0b228dc4be74b94970b4627681aa6.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion" width="1920"/>
-                <img src="cbf284ab46eb7ba6243cf1987679743d5f14fdd1f2d9ecf77ee7be27baf0dffd.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion (completed)" width="1920"/>
-                <img src="cbf284ab46eb7ba6243cf1987679743d5f14fdd1f2d9ecf77ee7be27baf0dffd.png" title=" Gretty enters 'mariaisabelrendongiraldo@gmail.com' into campo correo" width="1920"/>
-                <img src="14eb2f53f9e9ca8f9493038bb7abcd13b515ef9607c6ca856a066fba2d586072.png" title=" Gretty enters 'mariaisabelrendongiraldo@gmail.com' into campo correo (completed)" width="1920"/>
-                <img src="14eb2f53f9e9ca8f9493038bb7abcd13b515ef9607c6ca856a066fba2d586072.png" title=" Gretty enters 'MariaGiraldo_123' into campo contrase&ntilde;a" width="1920"/>
-                <img src="e5f2349f020d9e5fdfd79433c633d0849ed4622ad945db9602fe20af1451ad78.png" title=" Gretty enters 'MariaGiraldo_123' into campo contrase&ntilde;a (completed)" width="1920"/>
-                <img src="e5f2349f020d9e5fdfd79433c633d0849ed4622ad945db9602fe20af1451ad78.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion" width="1920"/>
-                <img src="15383a39a0867903e6ced913d16012d0026f1d1c0b66b6d4c8dd4792778f95d5.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion (completed)" width="1920"/>
-                <img src="15383a39a0867903e6ced913d16012d0026f1d1c0b66b6d4c8dd4792778f95d5.png" title=" Gretty iniciar sesion (completed)" width="1920"/>
-                <img src="15383a39a0867903e6ced913d16012d0026f1d1c0b66b6d4c8dd4792778f95d5.png" title=" Dado que el cliente esta logueado en la pagina principal (completed)" width="1920"/>
-                <img src="15383a39a0867903e6ced913d16012d0026f1d1c0b66b6d4c8dd4792778f95d5.png" title=" Cuando agrega varios productos al carrito" width="1920"/>
-                <img src="c5d1fd932c684f8bf1f5d4bf1da310529a258b15bf28a457d8bdcc633e7931e2.png" title=" Y completa la informacion del formulario del pago" width="1920"/>
-                <img src="c5d1fd932c684f8bf1f5d4bf1da310529a258b15bf28a457d8bdcc633e7931e2.png" title=" Entonces mostrara un mensaje confirmando la compra: <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="c61d4ae25797508f6a9d116e8e40a2905ad645e9a686d6fc90dc5fca48aa6461.png" title=" Gretty opens the Pagina inicial (completed)" width="1920"/>
+                <img src="c61d4ae25797508f6a9d116e8e40a2905ad645e9a686d6fc90dc5fca48aa6461.png" title=" Gretty abrir pagina inicial (completed)" width="1920"/>
+                <img src="f879a411bfd75180af8be53ceccdda5f3734ce7bb1a3fe69b0774f18e97f3573.png" title=" Gretty navegar a inicio sesion" width="1920"/>
+                <img src="9b67ca51f516d0fe1fd9ce3f6f5e6d156c72194e4d6919473250a65d422f0b05.png" title=" Gretty clicks on campo correo" width="1920"/>
+                <img src="f057073fcac937c06908838f9faf774168215f3fe938081a7ac6e26484cf9038.png" title=" Gretty clicks on campo correo (completed)" width="1920"/>
+                <img src="f057073fcac937c06908838f9faf774168215f3fe938081a7ac6e26484cf9038.png" title=" Gretty navegar a inicio sesion (completed)" width="1920"/>
+                <img src="f057073fcac937c06908838f9faf774168215f3fe938081a7ac6e26484cf9038.png" title=" Gretty iniciar sesion" width="1920"/>
+                <img src="87fdf0e2a2652d08acc5d46446a7ccd0a32f299c7f0013f585b0e3d4fe33a5b6.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion" width="1920"/>
+                <img src="d579556e189fde44a3fd2d60134c42e98787b46e69b8007a66670a935966f9d3.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion (completed)" width="1920"/>
+                <img src="d579556e189fde44a3fd2d60134c42e98787b46e69b8007a66670a935966f9d3.png" title=" Gretty enters 'mariaisabelrendongiraldo@gmail.com' into campo correo" width="1920"/>
+                <img src="0a8566ebc39aced1d9cf47456138d4b5e79e77b45823fe6980836aa42435008b.png" title=" Gretty enters 'mariaisabelrendongiraldo@gmail.com' into campo correo (completed)" width="1920"/>
+                <img src="0a8566ebc39aced1d9cf47456138d4b5e79e77b45823fe6980836aa42435008b.png" title=" Gretty enters 'MariaGiraldo_123' into campo contrase&ntilde;a" width="1920"/>
+                <img src="769406190313143a5ef374e11065d7ba242f428580feafd1418f063f4abeef9a.png" title=" Gretty enters 'MariaGiraldo_123' into campo contrase&ntilde;a (completed)" width="1920"/>
+                <img src="769406190313143a5ef374e11065d7ba242f428580feafd1418f063f4abeef9a.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion" width="1920"/>
+                <img src="7c6275d62d743c2979c633b9c10b755216ec20ba4bd90a270dc8c0b74f9df5cd.png" title=" Gretty clicks on Bot&oacute;n iniciar sesion (completed)" width="1920"/>
+                <img src="7c6275d62d743c2979c633b9c10b755216ec20ba4bd90a270dc8c0b74f9df5cd.png" title=" Gretty iniciar sesion (completed)" width="1920"/>
+                <img src="7c6275d62d743c2979c633b9c10b755216ec20ba4bd90a270dc8c0b74f9df5cd.png" title=" Dado que el cliente esta logueado en la pagina principal (completed)" width="1920"/>
+                <img src="7c6275d62d743c2979c633b9c10b755216ec20ba4bd90a270dc8c0b74f9df5cd.png" title=" Cuando agrega varios productos al carrito" width="1920"/>
+                <img src="cf7ef2d934b590c57fd654db3ecb99a7ad60d39a70b35f1c49f610c6fbc8070a.png" title=" Gretty flujo compra" width="1920"/>
+                <img src="f242e45d976c58b96cac836957e495b34d93d8bc5a1c56fcbcdcf00f6f1b3317.png" title=" Gretty clicks on categoria despensa" width="1920"/>
+                <img src="1ff19b6b2d991ff1c297bf6f65a363b8c4e304352d365fa79eb85a0fc68f4a30.png" title=" Gretty clicks on categoria despensa (completed)" width="1920"/>
+                <img src="1ff19b6b2d991ff1c297bf6f65a363b8c4e304352d365fa79eb85a0fc68f4a30.png" title=" Gretty clicks on opcion aceites" width="1920"/>
+                <img src="6cb168eac29df097c6ac79e4445f1385837c4815e697a7fcfa264127df5b2180.png" title=" Gretty clicks on opcion aceites (completed)" width="1920"/>
+                <img src="6cb168eac29df097c6ac79e4445f1385837c4815e697a7fcfa264127df5b2180.png" title=" Gretty clicks on opcion ordenar por" width="1920"/>
+                <img src="69c43cae05c915b6722d7e57e25d6aeae0701086b60d37f973cdfc4849f304ae.png" title=" Gretty clicks on opcion ordenar por (completed)" width="1920"/>
+                <img src="69c43cae05c915b6722d7e57e25d6aeae0701086b60d37f973cdfc4849f304ae.png" title=" Gretty hovers over #target" width="1920"/>
+                <img src="4a56bc4b1b82404ecdbd42ca9ac3513a02100bf3bef805501dcea8144d83eb77.png" title=" Gretty hovers over #target (completed)" width="1920"/>
+                <img src="4a56bc4b1b82404ecdbd42ca9ac3513a02100bf3bef805501dcea8144d83eb77.png" title=" Gretty clicks on carrito" width="1920"/>
+                <img src="937d729531e15010ceba3bc10d0156f52286048d7583bea78f45bf2dd6f27f85.png" title=" Gretty clicks on carrito (completed)" width="1920"/>
+                <img src="110ceb5ad69467e2cd65fffcd104be0ef39260d820b128bcebe2d4d8438a1208.png" title=" Gretty clicks on agregar producto1" width="1920"/>
+                <img src="1a6a2316094615b85b4c6801a99fd8a6befa7ad63355c53a1becc7bf9988ec02.png" title=" Gretty clicks on agregar producto1 (completed)" width="1920"/>
+                <img src="15296ec4586cd75bb2e1195af0a613fbc0bc184140933ded933074bea4d172b7.png" title=" Gretty clicks on agregar producto2" width="1920"/>
+                <img src="c5af03a45e70a4b0213d0a8d6c8ed6b3b96021a26dc4b15976ff234f98bdca80.png" title=" Gretty clicks on agregar producto2 (completed)" width="1920"/>
+                <img src="4e9b71f893f2fd041e9a8c12175ac848bf16c328bfa7fead1c78ea7ad1db96ef.png" title=" Gretty clicks on agregar producto3" width="1920"/>
+                <img src="40426443197989130381383268e3738cb76281ac534a558f9aee193a8a52aa4e.png" title=" Gretty clicks on agregar producto3 (completed)" width="1920"/>
+                <img src="ab0f8e837b06c45bfb64d7808967924c62e9d9a264498ee7e44b832660912449.png" title=" Gretty clicks on carrito compras" width="1920"/>
+                <img src="f232bcd3dec82b3fd776d120551fb92b5ff2b729223f088e8622ac9a240be0b3.png" title=" Gretty clicks on carrito compras (completed)" width="1920"/>
+                <img src="f232bcd3dec82b3fd776d120551fb92b5ff2b729223f088e8622ac9a240be0b3.png" title=" Gretty clicks on ver carrito compras" width="1920"/>
+                <img src="60ad36b8ad1ca61802e9061637ac8ea84110f1a70cde82b367b991111da240a1.png" title=" Gretty clicks on ver carrito compras (completed): <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 
