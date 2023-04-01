@@ -70,12 +70,11 @@ public class CompraStepDefinitions extends Configuracion {
 
     @Entonces("mostrara un mensaje confirmando la compra")
     public void mostraraUnMensajeConfirmandoLaCompra() {
-   /**
         try{
             theActorInTheSpotlight().should(
-                    seeThat(mensajeCompra(), equalTo("Gracias por su compra!")),
-                    seeThat(mensajeOrden(), equalTo("Your order number is:")),
-                    seeThat(mensajeNumeroOrden(), equalTo(notNullValue()))
+                    seeThat(mensajeCompra(), equalTo("Gracias por su compra!"))
+                    //seeThat(mensajeOrden(), equalTo("Your order number is:")),
+                    //seeThat(mensajeNumeroOrden(), equalTo(notNullValue()))
             );
             quitarDriver();
         }catch (Exception exception) {
@@ -83,6 +82,5 @@ public class CompraStepDefinitions extends Configuracion {
             Assertions.fail(exception.getMessage(),exception);
             LOGGER.warn(exception.getMessage(), exception);
         }
-    */
     }
 }

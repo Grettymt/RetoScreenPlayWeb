@@ -17,6 +17,7 @@ public class FlujoCompra implements Task {
                 Click.on(BOTON_PERMITIR_COOKIES),
                 Click.on(OPCION_CATEGORIA_DESPENSA),
                 Click.on(OPCION_ACEITES),
+                WaitUntil.the(OPCION_ORDERNAR_POR,isClickable()),
                 Click.on(OPCION_ORDERNAR_POR),
                 HoverOverElement.over(OPCION_ORDERNAR_POR_PRECIO),
                 WaitUntil.the(ORDENAR_PRODUCTO_DESC,isClickable()),
@@ -40,10 +41,8 @@ public class FlujoCompra implements Task {
                 WaitUntil.the(RADIO_BUTTON_CONSIGNACION,isVisible()),
                 Click.on(RADIO_BUTTON_CONSIGNACION),
                 WaitUntil.the(BOTON_REALIZAR_PEDIDO,isClickable()),
-                Scroll.to(BOTON_REALIZAR_PEDIDO)
-                /**
+                Scroll.to(BOTON_REALIZAR_PEDIDO),
                 Click.on(BOTON_REALIZAR_PEDIDO)
-                 */
         );
     }
 
