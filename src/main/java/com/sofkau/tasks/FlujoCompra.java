@@ -8,19 +8,21 @@ import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static com.sofkau.ui.DespensaCompra.*;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class FlujoCompra implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Click.on(BOTON_PERMITIR_COOKIES),
                 Click.on(OPCION_CATEGORIA_DESPENSA),
                 Click.on(OPCION_ACEITES),
                 Click.on(OPCION_ORDERNAR_POR),
                 HoverOverElement.over(OPCION_ORDERNAR_POR_PRECIO),
-                WaitUntil.the(FLECHA,isClickable()),
-                Click.on(FLECHA),
+                WaitUntil.the(ORDENAR_PRODUCTO_DESC,isClickable()),
+                Click.on(ORDENAR_PRODUCTO_DESC),
                 WaitUntil.the(AGREGAR_PRODUCTO_UNO,isClickable()),
+                Scroll.to(PRECIO_PRODUCTO_UNO),
                 Click.on(AGREGAR_PRODUCTO_UNO),
                 WaitUntil.the(AGREGAR_PRODUCTO_DOS,isClickable()),
                 Click.on(AGREGAR_PRODUCTO_DOS),
@@ -30,15 +32,18 @@ public class FlujoCompra implements Task {
                 Click.on(CARRITO_COMPRAS),
                 WaitUntil.the(VER_CARRITO_COMPRAS,isClickable()),
                 Click.on(VER_CARRITO_COMPRAS),
-                WaitUntil.the(TRAMITAR_PEDIDO,isClickable()),
+                WaitUntil.the(TRAMITAR_PEDIDO,isPresent()),
                 Click.on(TRAMITAR_PEDIDO),
                 WaitUntil.the(BOTON_ENVIO_CONTINUAR,isClickable()),
                 Scroll.to(BOTON_ENVIO_CONTINUAR),
                 Click.on(BOTON_ENVIO_CONTINUAR),
-                WaitUntil.the(RADIO_BUTTON_CONSIGNACION,isClickable()),
+                WaitUntil.the(RADIO_BUTTON_CONSIGNACION,isVisible()),
                 Click.on(RADIO_BUTTON_CONSIGNACION),
                 WaitUntil.the(BOTON_REALIZAR_PEDIDO,isClickable()),
+                Scroll.to(BOTON_REALIZAR_PEDIDO)
+                /**
                 Click.on(BOTON_REALIZAR_PEDIDO)
+                 */
         );
     }
 

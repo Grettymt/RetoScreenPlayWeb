@@ -5,6 +5,9 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 
 public class DespensaCompra extends PageObject {
+    public static final Target BOTON_PERMITIR_COOKIES = Target.the("permitir cookies")
+            .located(By.id("btn-cookie-allow"));
+
     public static final Target OPCION_CATEGORIA_DESPENSA = Target.the("categoria despensa")
             .located(By.cssSelector("a[href='https://vaquitaexpress.com.co/despensa.html']"));
 
@@ -17,16 +20,20 @@ public class DespensaCompra extends PageObject {
     public static final Target OPCION_ORDERNAR_POR_PRECIO = Target.the("opcion ordenar por precio")
             .located(By.cssSelector("div[data-role='sorter'][data-value='price']"));
 
-    public static final Target FLECHA = Target.the("carrito").located(By.xpath("(//*[name()='polygon'])[1]"));
+    public static final Target ORDENAR_PRODUCTO_DESC = Target.the("ordenar producto desc")
+            .located(By.xpath("//div[contains(@class, 'toolbar-sorter')]//a[contains(@class,'sorter-action')]"));
 
-    public static final Target AGREGAR_PRODUCTO_UNO = Target.the("agregar producto1")
-            .located(By.xpath("(//button[contains(@class,'tocart ')])[1]"));
+    public static final Target AGREGAR_PRODUCTO_UNO = Target.the("agregar producto uno")
+            .located(By.xpath("(//button[contains(@class,'tocart ')])[6]"));
 
-    public static final Target AGREGAR_PRODUCTO_DOS = Target.the("agregar producto2")
-            .located(By.xpath("(//button[contains(@class,'tocart ')])[2]"));
+    public static final Target PRECIO_PRODUCTO_UNO = Target.the("precio producto uno")
+            .located(By.xpath("(//a[@class='qty-math qty-inc icon-white'])[1]"));
 
-    public static final Target AGREGAR_PRODUCTO_TRES = Target.the("agregar producto3")
-            .located(By.xpath("(//button[contains(@class,'tocart ')])[3]"));
+    public static final Target AGREGAR_PRODUCTO_DOS = Target.the("agregar producto dos")
+            .located(By.xpath("(//button[contains(@class,'tocart ')])[7]"));
+
+    public static final Target AGREGAR_PRODUCTO_TRES = Target.the("agregar producto tres")
+            .located(By.xpath("(//button[contains(@class,'tocart ')])[8]"));
 
     public static final Target CARRITO_COMPRAS = Target.the("carrito compras")
             .located(By.cssSelector(".action.showcart"));
