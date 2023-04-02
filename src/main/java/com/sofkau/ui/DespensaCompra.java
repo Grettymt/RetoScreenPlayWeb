@@ -23,6 +23,9 @@ public class DespensaCompra extends PageObject {
     public static final Target ORDENAR_PRODUCTO_DESC = Target.the("ordenar producto desc")
             .located(By.xpath("//div[contains(@class, 'toolbar-sorter')]//a[contains(@class,'sorter-action')]"));
 
+    public static final Target CANTIDAD_PRODUCTO_UNO = Target.the("cantidad producto uno")
+            .located(By.xpath("(//div[contains(@class,'custom-qty')]//a[contains(@class,'icon-plus')])[1]"));
+
     public static final Target AGREGAR_PRODUCTO_UNO = Target.the("agregar producto uno")
             .located(By.xpath("(//button[contains(@class,'tocart ')])[6]"));
 
@@ -43,6 +46,9 @@ public class DespensaCompra extends PageObject {
 
     public static final Target TRAMITAR_PEDIDO = Target.the("tramitar pedido")
             .located(By.xpath("(//button[@title='Tramitar pedido'])[1]"));
+
+    public static final Target CANTIDAD_RESUMEN_PRODUCTO_NUMERO_UNO = Target.the("cantidad resumen producto uno")
+            .located(By.xpath("(//ol[@class='minicart-items']/li)[1]//div[@class='product-item-inner']//div[@class='details-qty']/span[@class='value']"));
 
     public static final Target BOTON_ENVIO_CONTINUAR = Target.the("ver carrito compras")
             .located(By.cssSelector(".button.action.continue.primary"));

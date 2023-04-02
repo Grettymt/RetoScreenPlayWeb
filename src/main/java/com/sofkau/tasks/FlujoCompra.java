@@ -33,16 +33,10 @@ public class FlujoCompra implements Task {
                 Click.on(CARRITO_COMPRAS),
                 WaitUntil.the(VER_CARRITO_COMPRAS,isClickable()),
                 Click.on(VER_CARRITO_COMPRAS),
+                Click.on(CANTIDAD_PRODUCTO_UNO),
                 WaitUntil.the(TRAMITAR_PEDIDO,isPresent()),
                 Click.on(TRAMITAR_PEDIDO),
-                WaitUntil.the(BOTON_ENVIO_CONTINUAR,isClickable()),
-                Scroll.to(BOTON_ENVIO_CONTINUAR),
-                Click.on(BOTON_ENVIO_CONTINUAR),
-                WaitUntil.the(RADIO_BUTTON_CONSIGNACION,isVisible()),
-                Click.on(RADIO_BUTTON_CONSIGNACION),
-                WaitUntil.the(BOTON_REALIZAR_PEDIDO,isClickable()),
-                Scroll.to(BOTON_REALIZAR_PEDIDO),
-                Click.on(BOTON_REALIZAR_PEDIDO)
+                WaitUntil.the(CANTIDAD_RESUMEN_PRODUCTO_NUMERO_UNO,isVisible())
         );
     }
 

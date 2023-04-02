@@ -9,8 +9,9 @@ import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
 import static com.sofkau.questions.MensajeCompra.mensajeCompra;
-import static com.sofkau.questions.MensajeOrden.mensajeOrden;
-import static com.sofkau.questions.NumeroOrden.mensajeNumeroOrden;
+import static com.sofkau.questions.MensajeNumeroOrden.mensajeNumeroOrden;
+import static com.sofkau.questions.MensajeValorCantidadProducto.mensajeValorCantidadProducto;
+import static com.sofkau.tasks.FinalizarCompra.finalizarCompra;
 import static com.sofkau.tasks.FlujoCompra.flujoCompra;
 import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
 import static com.sofkau.tasks.NavegarAInicioSesion.navegarAInicioSesion;
@@ -55,12 +56,17 @@ public class CompraStepDefinitions extends Configuracion {
         }
     }
 
-    @Cuando("completa la informacion del formulario del pago")
-    public void completaLaInformacionDelFormularioDelPago() {
+    @Cuando("se incrementa la {int} de uno de los productos posteriormente se finaliza la compra")
+    public void seIncrementaLaDeUnoDeLosProductosPosteriormenteSeFinalizaLaCompra(Integer cantidad) {
         try{
-            theActorInTheSpotlight().attemptsTo(
-
+            theActorInTheSpotlight().should(
+                seeThat(mensajeValorCantidadProducto(), equalTo(cantidad + ""))
             );
+
+            theActorInTheSpotlight().attemptsTo(
+                    finalizarCompra()
+            );
+
         }catch (Exception exception) {
             quitarDriver();
             Assertions.fail(exception.getMessage(),exception);
@@ -72,9 +78,8 @@ public class CompraStepDefinitions extends Configuracion {
     public void mostraraUnMensajeConfirmandoLaCompra() {
         try{
             theActorInTheSpotlight().should(
-                    seeThat(mensajeCompra(), equalTo("Gracias por su compra!"))
-                    //seeThat(mensajeOrden(), equalTo("Your order number is:")),
-                    //seeThat(mensajeNumeroOrden(), equalTo(notNullValue()))
+                    seeThat(mensajeCompra(), equalTo("Gracias por su compra!")),
+                    seeThat(mensajeNumeroOrden(), notNullValue())
             );
             quitarDriver();
         }catch (Exception exception) {

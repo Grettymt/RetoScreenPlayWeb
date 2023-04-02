@@ -8,8 +8,12 @@ Característica: Comprar en linea
   Para poder ahorrar tiempo y acceder a mas productos disponibles sin necesidad de ir a la tienda
 
   @CompraExitosa
-  Escenario: Compra exitosa de productos
+  Esquema del escenario: Compra exitosa de productos
     Dado que el cliente esta logueado en la pagina principal
     Cuando agrega varios productos al carrito
-    Y completa la informacion del formulario del pago
+    Y se incrementa la <cantidad> de uno de los productos posteriormente se finaliza la compra
     Entonces mostrara un mensaje confirmando la compra
+
+    Ejemplos:
+      | cantidad |
+      | 2        |
